@@ -9,25 +9,15 @@ Xcode打包脚本
 $python build.py
 ```
 3. 设置参数
-  #mainPath
+  #mainPath ![image](https://github.com/fanrr/xcodebuild/blob/master/mainPath.jpeg)
 
-  ![image](https://github.com/fanrr/xcodebuild/blob/master/mainPath.jpeg)
+  #targetName ![image](https://github.com/fanrr/xcodebuild/blob/master/targetName.jpeg)
 
-  #targetName
+  #xcworkspaceName ![image](https://github.com/fanrr/xcodebuild/blob/master/xcworkspaceName.jpeg)
 
-    ![image](https://github.com/fanrr/xcodebuild/blob/master/targetName.jpeg)
+  #schemeName ![image](https://github.com/fanrr/xcodebuild/blob/master/schemeName.jpeg)
 
-  #xcworkspaceName
-
-    ![image](https://github.com/fanrr/xcodebuild/blob/master/xcworkspaceName.jpeg)
-
-  #schemeName    
-
-    ![image](https://github.com/fanrr/xcodebuild/blob/master/schemeName.jpeg)
-
-  #certificateName
-
-    ![image](https://github.com/fanrr/xcodebuild/blob/master/certificateName.jpeg)
+  #certificateName ![image](https://github.com/fanrr/xcodebuild/blob/master/certificateName.jpeg)
 
   #exportPath
 
