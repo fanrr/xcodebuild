@@ -3,12 +3,12 @@ Xcode打包脚本
 
 
 # 怎么用它？
-- clone 工程
-- 打开终端cd到xcodebuild工程下执行
+###clone 工程
+###打开终端cd到xcodebuild工程下执行
 ```shell
 $python build.py
 ```
-- 设置参数
+###设置参数
 ```shell
 您需要设置参数,您的参数如下:
 =========================
@@ -20,27 +20,27 @@ certificateName   :None
 exportPath        :None
 =========================
 ```
-##mainPath
+- mainPath
   ```shell
   input mainPath:/Users/Raymond/Documents/Demo
   ```
-##targetName
+- targetName
   ```shell
   input targetName:Demo
   ```
-##xcworkspaceName
+- xcworkspaceName
   ```shell
   input xcworkspaceName:Demo
   ```
-##schemeName
+- schemeName
   ```shell
   input schemeName:Demo
   ```
-##certificateName
+- certificateName
   ```shell
   input certificateName:iPhone Developer: xx xx (xxxxxxx)
   ```
-##exportPath
+- exportPath
   ```shell
   input exportPath:/Users/Raymond/Desk/IPA/
   ```
