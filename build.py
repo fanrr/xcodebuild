@@ -6,13 +6,6 @@ import getpass
 import json
 import hashlib
 
-# mainPath="/Users/Raymond/Documents/kukeLive/KukerLive"
-# targetName="KukerLive"
-# schemeName="KukerLive"
-# certificateName="iPhone Developer: Lei Gao (7BD2GN9H2M)"
-# exportPath="/Users/Raymond/Desktop"
-# configName="config.json"
-# configDirName=".build_app_json"
 mainPath        = None
 targetName      = None
 xcworkspaceName = None
