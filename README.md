@@ -48,3 +48,11 @@ exportPath        :None
   input exportPath:/Users/Raymond/Desk/IPA/
   ```
 设置完参数，就等待IPA包的出现吧，傻瓜式的打包
+
+- 修改参数
+```shell
+$python build.py -c
+#or
+$python build.py -config
+#不输入默认不做修改
+```
