@@ -15,6 +15,7 @@ import hashlib
 # configDirName=".build_app_json"
 mainPath        = None
 targetName      = None
+xcworkspaceName = None
 schemeName      = None
 certificateName = None
 exportPath      = None
@@ -26,6 +27,7 @@ def showParameter():
     print "=================================="
     print "mainPath          :%s"%mainPath
     print "targetName        :%s"%targetName
+    print "xcworkspaceName   :%s"%xcworkspaceName
     print "schemeName        :%s"%schemeName
     print "certificateName   :%s"%certificateName
     print "exportPath        :%s"%exportPath
@@ -37,11 +39,13 @@ def showParameter():
 def setParameter():
     global mainPath
     global targetName
+    global xcworkspaceName
     global schemeName
     global certificateName
     global exportPath
     mainPath        =raw_input("input mainPath:")
     targetName      =raw_input("input targetName:")
+    xcworkspaceName =raw_input("input xcworkspaceName:")
     schemeName      =raw_input("input schemeName:")
     certificateName =raw_input("input certificateName:")
     exportPath      =raw_input("input exportPath:")
@@ -53,6 +57,7 @@ def setParameter():
         config = {}
         config["mainPath"]        =mainPath
         config["targetName"]      =targetName
+        config["xcworkspaceName"] =xcworkspaceName
         config["schemeName"]      =schemeName
         config["certificateName"] =certificateName
         config["exportPath"]     =exportPath
@@ -76,6 +81,7 @@ def initConfig():
     config = {}
     config["mainPath"]        = None
     config["targetName"]      = None
+    config["xcworkspaceName"] = None
     config["schemeName"]      = None
     config["certificateName"] = None
     config["exportPath"]      = None
@@ -94,12 +100,14 @@ def readJsonFile():
             js = json.loads(line)
             global mainPath
             global targetName
+            global xcworkspaceName
             global schemeName
             global certificateName
             global exportPath
 
             mainPath=js["mainPath"]
             targetName=js["targetName"]
+            xcworkspaceName=js["xcworkspaceName"]
             schemeName=js["schemeName"]
             certificateName=js["certificateName"]
             exportPath=js["exportPath"]
@@ -118,13 +126,13 @@ def isNone(para):
     pass
 #是否需要设置参数
 def isNeedSetParameter():
-    if isNone(mainPath) or isNone(targetName) or isNone(schemeName) or isNone(certificateName) or isNone(exportPath):
+    if isNone(mainPath) or isNone(targetName) or isNone(xcworkspaceName) or isNone(schemeName) or isNone(certificateName) or isNone(exportPath):
         return True
     else :
         return False
 
 def cleanAction():
-    action="cd %s;xcodebuild -workspace %s.xcworkspace -scheme %s clean"%(mainPath,targetName,schemeName)
+    action="cd %s;xcodebuild -workspace %s.xcworkspace -scheme %s clean"%(mainPath,xcworkspaceName,schemeName)
     print(action)
     os.system(action)
     pass
@@ -133,7 +141,7 @@ def buildAction():
     action="cd %s;xcodebuild \
     -workspace %s.xcworkspace \
     -scheme %s CODE_SIGN_IDENTITY='%s' \
-    -derivedDataPath build/"%(mainPath,targetName,schemeName,certificateName)
+    -derivedDataPath build/"%(mainPath,xcworkspaceName,schemeName,certificateName)
     print(action)
     os.system(action)
     pass
@@ -141,8 +149,8 @@ def buildAction():
 def creatAction():
     action="cd %s;xcrun -sdk iphoneos PackageApplication \
     -v %s/build/Build/Products/Debug-iphoneos/%s.app \
-    -o %s/KukerLive.ipa \
-    CODE_SIGN_IDENTITY='%s'"%(mainPath,mainPath,targetName,exportPath,certificateName)
+    -o %s/%s.ipa \
+    CODE_SIGN_IDENTITY='%s'"%(mainPath,mainPath,targetName,exportPath,targetName,certificateName)
     print(action)
     os.system(action)
     pass
