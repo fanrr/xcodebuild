@@ -172,9 +172,9 @@ def main():
         showParameter()
         setParameter()
         sys.exit()
-    # cleanAction()
-    # buildAction()
-    # creatAction()
+    cleanAction()
+    buildAction()
+    creatAction()
     rmoveFinder()
     return
 main()
