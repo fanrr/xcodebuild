@@ -47,3 +47,4 @@ exportPath        :None
   ```shell
   input exportPath:/Users/Raymond/Desk/IPA/
   ```
+设置完参数，就等待IPA包的出现吧，傻瓜式的打包
