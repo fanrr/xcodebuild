@@ -20,8 +20,9 @@ schemeName        :None
 certificateName   :None
 exportPath        :None
 =========================
-[具体参数对照](https://github.com/fanrr/xcodebuild/blob/master/help.jpeg)
 ```
+[具体参数对照](https://github.com/fanrr/xcodebuild/blob/master/help.jpeg)
+
 ###mainPath
   ```shell
   input mainPath:/Users/Raymond/Documents/Demo
