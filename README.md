@@ -9,16 +9,39 @@ Xcode打包脚本
 $python build.py
 ```
 3. 设置参数
-  #mainPath ![image](https://github.com/fanrr/xcodebuild/blob/master/mainPath.jpeg)
-
-  #targetName ![image](https://github.com/fanrr/xcodebuild/blob/master/targetName.jpeg)
-
-  #xcworkspaceName ![image](https://github.com/fanrr/xcodebuild/blob/master/xcworkspaceName.jpeg)
-
-  #schemeName ![image](https://github.com/fanrr/xcodebuild/blob/master/schemeName.jpeg)
-
-  #certificateName ![image](https://github.com/fanrr/xcodebuild/blob/master/certificateName.jpeg)
-
+```shell
+您需要设置参数,您的参数如下:
+=========================
+mainPath          :None
+targetName        :None
+xcworkspaceName   :None
+schemeName        :None
+certificateName   :None
+exportPath        :None
+=========================
+```
+  #mainPath
+  ```shell
+  input mainPath:/Users/Raymond/Documents/Demo
+  ```
+  #targetName
+  ```shell
+  input targetName:Demo
+  ```
+  #xcworkspaceName
+  ```shell
+  input xcworkspaceName:Demo
+  ```
+  #schemeName
+  ```shell
+  input schemeName:Demo
+  ```
+  #certificateName
+  ```shell
+  input certificateName:iPhone Developer: xx xx (xxxxxxx)
+  ```
   #exportPath
-
-    设置IPA导出的路径，这里设置的是桌面/Users/Raymond/Desk
+  ```shell
+  input exportPath:/Users/Raymond/Desk/IPA/
+  ```
+  ![image](https://github.com/fanrr/xcodebuild/blob/master/1.jpeg)
