@@ -9,6 +9,7 @@ Xcode打包脚本
 $python build.py
 ```
 - 设置参数
+
 ```shell
 您需要设置参数,您的参数如下:
 =========================
@@ -19,6 +20,7 @@ schemeName        :None
 certificateName   :None
 exportPath        :None
 =========================
+[具体参数对照](https://github.com/fanrr/xcodebuild/blob/master/help.jpeg)
 ```
 ###mainPath
   ```shell
@@ -44,4 +46,3 @@ exportPath        :None
   ```shell
   input exportPath:/Users/Raymond/Desk/IPA/
   ```
-  ![image](https://github.com/fanrr/xcodebuild/blob/master/help.jpeg)
