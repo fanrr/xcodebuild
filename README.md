@@ -3,12 +3,12 @@ Xcode打包脚本
 
 
 # 怎么用它？
-1. clone 工程
-2. 打开终端cd到xcodebuild工程下执行
+- clone 工程
+- 打开终端cd到xcodebuild工程下执行
 ```shell
 $python build.py
 ```
-3. 设置参数
+- 设置参数
 ```shell
 您需要设置参数,您的参数如下:
 =========================
