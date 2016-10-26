@@ -15,6 +15,27 @@ exportPath      = None
 configName      = "config.json"
 configDirName   = ".build_app_json"
 commendPath     = "/Users/" + getpass.getuser()
+
+#参数设置
+def setOptparse():
+    p = optparse.OptionParser()
+    #参数配置指令
+    p.add_option("--config","-c",action="store_true", default=None,help = "修改配置参数")
+    options,arguments = p.parse_args()
+    #配置信息
+    if options.config == True and len(arguments) == 0 :
+        configAction()
+    pass
+
+def configAction():
+    os.system("clear")
+    readJsonFile()
+    print "您的参数如下:"
+    showParameter()
+    setParameter()
+    sys.exit()
+    pass
+
 #显示已有的参数
 def showParameter():
     print "=================================="
@@ -36,24 +57,41 @@ def setParameter():
     global schemeName
     global certificateName
     global exportPath
-    mainPath        =raw_input("input mainPath:")
-    targetName      =raw_input("input targetName:")
-    xcworkspaceName =raw_input("input xcworkspaceName:")
-    schemeName      =raw_input("input schemeName:")
-    certificateName =raw_input("input certificateName:")
-    exportPath      =raw_input("input exportPath:")
-
+    mainPathTemp        = raw_input("input mainPath:")
+    if not isNone(mainPathTemp):
+        mainPath        = mainPathTemp
+        pass
+    targetNameTemp      = raw_input("input targetName:")
+    if not isNone(targetNameTemp):
+        targetName      = targetNameTemp
+        pass
+    xcworkspaceNameTemp = raw_input("input xcworkspaceName:")
+    if not isNone(xcworkspaceNameTemp):
+        xcworkspaceName = xcworkspaceNameTemp
+        pass
+    schemeNameTemp      = raw_input("input schemeName:")
+    if not isNone(schemeNameTemp):
+        schemeName      = schemeNameTemp
+        pass
+    certificateNameTemp = raw_input("input certificateName:")
+    if not isNone(certificateNameTemp):
+        certificateName = certificateNameTemp
+        pass
+    exportPathTemp      = raw_input("input exportPath:")
+    if not isNone(exportPathTemp):
+        exportPath      = exportPathTemp
+        pass
     showParameter()
     #保存到本地
     try:
         fout = open(commendPath + "/" + configDirName + "/" + configName,'w')
         config = {}
-        config["mainPath"]        =mainPath
-        config["targetName"]      =targetName
-        config["xcworkspaceName"] =xcworkspaceName
-        config["schemeName"]      =schemeName
-        config["certificateName"] =certificateName
-        config["exportPath"]     =exportPath
+        config["mainPath"]        = mainPath
+        config["targetName"]      = targetName
+        config["xcworkspaceName"] = xcworkspaceName
+        config["schemeName"]      = schemeName
+        config["certificateName"] = certificateName
+        config["exportPath"]      = exportPath
         outStr = json.dumps(config,ensure_ascii = False)
         fout.write(outStr.strip().encode('utf-8') + '\n')
         fout.close()
