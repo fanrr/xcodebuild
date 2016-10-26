@@ -20,28 +20,28 @@ certificateName   :None
 exportPath        :None
 =========================
 ```
-  #mainPath
+##mainPath
   ```shell
   input mainPath:/Users/Raymond/Documents/Demo
   ```
-  #targetName
+##targetName
   ```shell
   input targetName:Demo
   ```
-  #xcworkspaceName
+##xcworkspaceName
   ```shell
   input xcworkspaceName:Demo
   ```
-  #schemeName
+##schemeName
   ```shell
   input schemeName:Demo
   ```
-  #certificateName
+##certificateName
   ```shell
   input certificateName:iPhone Developer: xx xx (xxxxxxx)
   ```
-  #exportPath
+##exportPath
   ```shell
   input exportPath:/Users/Raymond/Desk/IPA/
   ```
-  ![image](https://github.com/fanrr/xcodebuild/blob/master/1.jpeg)
+  ![image](https://github.com/fanrr/xcodebuild/blob/master/help.jpeg)
